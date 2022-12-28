@@ -2,7 +2,8 @@
 
 @interface SeTCPClient : NSObject
 
-- (void)connectToAddress:(NSString *)addr port:(NSUInteger)port error:(NSError **)error;
-- (void)sendData:(NSString *)data error:(NSError **)error;
+- (id)initWithMessage:(NSString *)message toAddress:(NSString *)addr andPort:(NSUInteger)port;
+- (void)connect:(NSError **)error;
+- (void)run:(NSError **)error;
 
 @end

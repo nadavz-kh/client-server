@@ -5,14 +5,19 @@
 
 #import "SeTCPServer.h"
 
+
+
 int main(int argc, const char * argv[]) {
-    SeTCPServer *server = [SeTCPServer new];
-    NSError *err = nil;
+    if(2 != argc) {
+        NSLog(@"too few arguments: <server> <port>");
+    }
     
-    [server startWithPort:6666 error:&err];
+    NSString *portStr = [NSString stringWithUTF8String:argv[1]];
+    NSInteger port = [portStr integerValue];
     
-    CFRunLoopRun();
-    
+    SeTCPServer *server = [[SeTCPServer alloc] initWithPort:port];
+    [server start];
+
     return 0;
 }
 

@@ -1,11 +1,12 @@
 #import <Foundation/Foundation.h>
 
-@interface SeTCPServer : NSObject <NSStreamDelegate>
+@interface SeTCPServer : NSObject
 
-@property (nonatomic) CFSocketRef socket;
-@property (nonatomic) NSInputStream *inputStream;
+@property (nonatomic) NSUInteger port;
 
-- (void)startWithPort:(NSUInteger) port error:(NSError **)error;
+- (id)initWithPort:(NSUInteger)port;
+- (void)start;
 - (void)stop;
+
 
 @end

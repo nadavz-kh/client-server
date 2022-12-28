@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		6264EC26291BA7BF00E643B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6264EC25291BA7BF00E643B7 /* main.m */; };
 		6264EC33291BA7DB00E643B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6264EC32291BA7DB00E643B7 /* main.m */; };
-		6282A2BE292CA5A20093C219 /* SeTCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6282A2BD292CA5A20093C219 /* SeTCPServer.m */; };
-		6282A2C1292F98370093C219 /* SeTCPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6282A2C0292F98370093C219 /* SeTCPClient.m */; };
+		62B356CC295AF68400FBFADC /* SeTCPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B356CB295AF68400FBFADC /* SeTCPClient.m */; };
+		62B356CF295B1EFE00FBFADC /* SeTCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B356CD295B1EFE00FBFADC /* SeTCPServer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,10 +39,12 @@
 		6264EC25291BA7BF00E643B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6264EC30291BA7DB00E643B7 /* Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Client; sourceTree = BUILT_PRODUCTS_DIR; };
 		6264EC32291BA7DB00E643B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6282A2BC292CA4F20093C219 /* SeTCPServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeTCPServer.h; sourceTree = "<group>"; };
-		6282A2BD292CA5A20093C219 /* SeTCPServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeTCPServer.m; sourceTree = "<group>"; };
-		6282A2BF292F97990093C219 /* SeTCPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeTCPClient.h; sourceTree = "<group>"; };
-		6282A2C0292F98370093C219 /* SeTCPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeTCPClient.m; sourceTree = "<group>"; };
+		6282A2CE293E21A50093C219 /* requirements.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = requirements.txt; sourceTree = "<group>"; };
+		62B356C92951BE0900FBFADC /* test_echo_server.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_echo_server.py; sourceTree = "<group>"; };
+		62B356CA295AF68400FBFADC /* SeTCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeTCPClient.h; sourceTree = "<group>"; };
+		62B356CB295AF68400FBFADC /* SeTCPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeTCPClient.m; sourceTree = "<group>"; };
+		62B356CD295B1EFE00FBFADC /* SeTCPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeTCPServer.m; sourceTree = "<group>"; };
+		62B356CE295B1EFE00FBFADC /* SeTCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeTCPServer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		6264EC19291BA7BF00E643B7 = {
 			isa = PBXGroup;
 			children = (
+				6282A2CD293CDE7B0093C219 /* Tests */,
 				6264EC24291BA7BF00E643B7 /* Server */,
 				6264EC31291BA7DB00E643B7 /* Client */,
 				6264EC23291BA7BF00E643B7 /* Products */,
@@ -84,9 +87,9 @@
 		6264EC24291BA7BF00E643B7 /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				62B356CE295B1EFE00FBFADC /* SeTCPServer.h */,
+				62B356CD295B1EFE00FBFADC /* SeTCPServer.m */,
 				6264EC25291BA7BF00E643B7 /* main.m */,
-				6282A2BC292CA4F20093C219 /* SeTCPServer.h */,
-				6282A2BD292CA5A20093C219 /* SeTCPServer.m */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -94,11 +97,20 @@
 		6264EC31291BA7DB00E643B7 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				62B356CA295AF68400FBFADC /* SeTCPClient.h */,
+				62B356CB295AF68400FBFADC /* SeTCPClient.m */,
 				6264EC32291BA7DB00E643B7 /* main.m */,
-				6282A2BF292F97990093C219 /* SeTCPClient.h */,
-				6282A2C0292F98370093C219 /* SeTCPClient.m */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		6282A2CD293CDE7B0093C219 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6282A2CE293E21A50093C219 /* requirements.txt */,
+				62B356C92951BE0900FBFADC /* test_echo_server.py */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +191,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6282A2BE292CA5A20093C219 /* SeTCPServer.m in Sources */,
 				6264EC26291BA7BF00E643B7 /* main.m in Sources */,
+				62B356CF295B1EFE00FBFADC /* SeTCPServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6282A2C1292F98370093C219 /* SeTCPClient.m in Sources */,
+				62B356CC295AF68400FBFADC /* SeTCPClient.m in Sources */,
 				6264EC33291BA7DB00E643B7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
